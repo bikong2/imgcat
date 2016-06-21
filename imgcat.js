@@ -13,7 +13,8 @@ var image = require('fs').readFileSync(imageFile);
 var img = new Image();
 img.src = image;
 
-var scale = 1 / Math.max(img.width/canvas.width, img.height/canvas.height);
+//var scale = 1 / Math.min(img.width/canvas.width, img.height/canvas.height);
+var scale = 1 / Math.min(img.width/canvas.width, img.height/canvas.height);
 var w = Math.floor(img.width * scale);
 var h = Math.floor(img.height * scale);
 
